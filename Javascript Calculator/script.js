@@ -1,52 +1,14 @@
-// VARIABLES: N1 N2 MODE SOLUTION 
-// FUNCTIONS: INPUT1 INPUT2 ARITHMETIC(=) CLEAR MEMCLEAR MEMSTORE MEMRECALL
-
-// RECEIVE NUMBER INPUT1 => N1
-
-// check n1, if empty launch input1 and display else push to n2
-
-// DISPLAY N1 IN WINDOW
-
-
-
-// RECEIVE ARITHMETIC MODE => MODE
-
-
-
-// RECEIVE NUMBER INPUT2 => N2
-
-
-
-// DISPLAY N2 IN WINDOW
-
-
-
-// PERFORM ARITHMETIC (=)
-
-
-
-// DISPLAY SOLUTION IN WINDOW
-
-
-
-// CLEAR FUNCTION
-
-
-
-// MEMORY CLEAR FUNCTION 
-
-
-
-// MEMORY STORE FUNCTION
-
-
-
-// MEMORY RECALL FUNCTION
 var n1 = [];
 var n2 = [];
-var mode = [];
+var mode = [0];
 var solution = [];
-// if (mode === []) {
+function clearCalc() {
+  n1.join('');
+  n1 = [];
+  document.getElementById("output").innerHTML = n1;
+}
+
+if (mode < 1) {
 function inputOne() {
   n1.push(1);
   document.getElementById("output").innerHTML = n1.join('');
@@ -87,4 +49,64 @@ function inputZero() {
   n1.push(0);
   document.getElementById("output").innerHTML = n1.join('');
 }
+}
 // } else {
+// function inputOne() {
+//   n2.push(1);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputTwo() {
+//   n2.push(2);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputThree() {
+//   n2.push(3);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputFour() {
+//   n2.push(4);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputFive() {
+//   n2.push(5);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputSix() {
+//   n2.push(6);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputSeven() {
+//   n2.push(7);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputEight() {
+//   n2.push(8);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputNine() {
+//   n2.push(9);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// function inputZero() {
+//   n2.push(0);
+//   document.getElementById("output").innerHTML = n2.join('');
+// }
+// }
+function modePlus() {
+  mode = 1;
+  // document.getElementById("output").innerHTML = n2;
+  n2 = n1;
+  n1 = [];
+}
+function modeMinus() {
+  
+  
+}
+function modeMult() {
+  
+  
+}
+function modeDiv() {
+  
+  
+}
