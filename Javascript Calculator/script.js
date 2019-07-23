@@ -5,6 +5,8 @@ var solution = [];
 function clearCalc() {
   n1.join('');
   n1 = [];
+  n2.join('');
+  n2 = [];
   document.getElementById("output").innerHTML = n1;
 }
 
@@ -99,14 +101,49 @@ function modePlus() {
   n1 = [];
 }
 function modeMinus() {
-  
-  
+  mode = 2;
+  n2 = n1;
+  n1 = [];
 }
 function modeMult() {
-  
-  
+  mode = 3;
+  n2 = n1;
+  n1 = [];
 }
 function modeDiv() {
-  
-  
+  mode = 4;
+  n2 = n1;
+  n1 = [];
 }
+function totalIs() {
+  if (mode === 1) {
+    // n1.join('');
+    // n2.join('');
+    solution = Number(n1.join('')) + Number(n2.join(''));
+    document.getElementById("output").innerHTML = solution;
+    mode = 0;
+  } else if (mode === 2) {
+    solution = Number(n2.join('')) - Number(n1.join(''));
+    document.getElementById("output").innerHTML = solution;
+    mode = 0;
+  } else if (mode === 3) {
+    solution = Number(n1.join('')) * Number(n2.join(''));
+    document.getElementById("output").innerHTML = solution;
+    mode = 0;
+  } else if (mode === 4) {
+    solution = Number(n2.join('')) / Number(n1.join(''));
+    document.getElementById("output").innerHTML = solution;
+    mode = 0;
+  }
+}
+// var first = prompt("enter first number");
+// var second = prompt("enter second number");
+// var arithmetic = prompt("add, subtract, multiply, or divide?");
+// var add = Number(first) + Number(second);
+// var subtract = Number(first) - Number(second);
+// var multiply = Number(first) * Number(second);
+// var divide = Number(first) / Number(second);
+// if (arithmetic === "add") {alert(add);}
+// else if (arithmetic === "subtract") {alert(subtract);}
+// else if (arithmetic === "multiply") {alert(multiply);}
+// else if (arithmetic === "divide") {alert(divide);}
