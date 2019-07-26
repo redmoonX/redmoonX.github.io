@@ -1,7 +1,10 @@
 var n1 = [];
 var n2 = [];
-var mode = [0];
+var mode = [];
 var solution = [];
+var memory = [];
+
+
 function clearCalc() {
   n1.join('');
   n1 = [];
@@ -49,6 +52,10 @@ function inputNine() {
 }
 function inputZero() {
   n1.push(0);
+  document.getElementById("output").innerHTML = n1.join('');
+}
+function decimalPoint() {
+  n1.push(".");
   document.getElementById("output").innerHTML = n1.join('');
 }
 }
@@ -114,6 +121,15 @@ function modeDiv() {
   mode = 4;
   n2 = n1;
   n1 = [];
+}
+function memSave() {
+  memory = document.getElementById("output").innerHTML;
+}
+function memClear() {
+  memory = [];
+}
+function memRecall() {
+  document.getElementById("output").innerHTML = memory;
 }
 function totalIs() {
   if (mode === 1) {
