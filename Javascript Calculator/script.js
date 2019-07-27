@@ -4,13 +4,12 @@ var mode = [];
 var solution = [];
 var memory = [];
 
-
 function clearCalc() {
   n1.join('');
   n1 = [];
   n2.join('');
   n2 = [];
-  document.getElementById("output").innerHTML = n1;
+  document.getElementById("output").innerHTML = 0;
 }
 
 if (mode < 1) {
@@ -51,56 +50,19 @@ function inputNine() {
   document.getElementById("output").innerHTML = n1.join('');
 }
 function inputZero() {
+  if (n1.length > 0) {
   n1.push(0);
   document.getElementById("output").innerHTML = n1.join('');
+} return;
 }
 function decimalPoint() {
+  var decCheck = n1.includes(".");
+  if (decCheck === false) {
   n1.push(".");
   document.getElementById("output").innerHTML = n1.join('');
+} return;
 }
 }
-// } else {
-// function inputOne() {
-//   n2.push(1);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputTwo() {
-//   n2.push(2);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputThree() {
-//   n2.push(3);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputFour() {
-//   n2.push(4);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputFive() {
-//   n2.push(5);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputSix() {
-//   n2.push(6);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputSeven() {
-//   n2.push(7);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputEight() {
-//   n2.push(8);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputNine() {
-//   n2.push(9);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// function inputZero() {
-//   n2.push(0);
-//   document.getElementById("output").innerHTML = n2.join('');
-// }
-// }
 function modePlus() {
   mode = 1;
   // document.getElementById("output").innerHTML = n2;
@@ -129,6 +91,7 @@ function memClear() {
   memory = [];
 }
 function memRecall() {
+  n1.push(memory);
   document.getElementById("output").innerHTML = memory;
 }
 function totalIs() {
@@ -152,14 +115,3 @@ function totalIs() {
     mode = 0;
   }
 }
-// var first = prompt("enter first number");
-// var second = prompt("enter second number");
-// var arithmetic = prompt("add, subtract, multiply, or divide?");
-// var add = Number(first) + Number(second);
-// var subtract = Number(first) - Number(second);
-// var multiply = Number(first) * Number(second);
-// var divide = Number(first) / Number(second);
-// if (arithmetic === "add") {alert(add);}
-// else if (arithmetic === "subtract") {alert(subtract);}
-// else if (arithmetic === "multiply") {alert(multiply);}
-// else if (arithmetic === "divide") {alert(divide);}
