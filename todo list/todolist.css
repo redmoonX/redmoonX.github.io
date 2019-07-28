@@ -1,0 +1,81 @@
+body {
+	height: 100vh;
+	background-image: linear-gradient(white, red);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 4em;
+	/*display-flex;
+	align-content: center;*/
+}
+
+.contentcontainer {
+display: flex;
+align-content: center;
+justify-content: center;
+
+}
+
+.textbox {
+	width: 290px;
+	/*padding: 30px,300px,30px,300px;*/
+	/*padding-left: 500px;
+	padding-right: 300px;*/
+}
+
+.textboxcontainer {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	display: flex;
+	justify-content: center;
+}
+
+.pagecontainer {
+	padding-top: 145px;
+}
+
+input {
+display: flex;
+justify-content: center;
+align-content: center;
+width: 250px;
+border-radius: 6px;
+border-width: 1px;
+border-color: black;
+background-color: transparent;
+
+}
+.buttonleft {
+padding-right: 10px;
+}
+.buttonright {
+padding-left: 10px;
+}
+.title {
+	width: 100%;
+	font-size: 4em;
+
+	}
+
+.buttons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 12px;
+	}
+
+#tgl {
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 3px;
+padding-bottom: 3px;
+}
+
+#tbtn {
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 3px;
+padding-bottom: 3px;
+
+}
