@@ -74,6 +74,7 @@ var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 
 
+
 function inputLength() {
 	return input.value.length;
 }
@@ -100,6 +101,16 @@ function deleteListElement(event) {
 function toggleComplete(event) {
 // event.target.className = "done";
 event.target.classList.toggle("done");
+}
+
+function toggleAllComplete () {
+  var toggall = document.querySelectorAll("li").length;
+    ul.classList.toggle("done");
+}
+
+function deleteAll () {
+  ul.innerHTML = "";  
+  
 }
 
 function addListAfterClick() {
