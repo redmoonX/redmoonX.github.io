@@ -1,3 +1,3 @@
 # redmoonX.github.io
 
-A collectipn of my work thus far.
+A collection of my work thus far.
