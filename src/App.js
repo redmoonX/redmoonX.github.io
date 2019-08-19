@@ -1,54 +1,67 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
-import SearchBox from './SearchBox.js';
-import Scroll from './Scroll';
-import './app.css';
-
-
+import Characters from './Characters.js';
+// import test from './test.json'
+import './App.css';
+  
 class App extends Component {
-	constructor() {
-		super()
-		this.state = {
-				robots: [],
-				searchfield: ''
+  constructor() {
+    super()
+      this.state = { robots: [], searchfield: ''}
+  
+  }
 
-		}
+      componentDidMount() {
+        fetch('./test.json').then(users => this.setState({ robots: users }))
+        }
+        // .then(resp => resp.json())
 
-	}
+      //   var data = require('./test.json');
 
-	componentDidMount() {
-		fetch('https://jsonplaceholder.typicode.com/users')
-			.then(response => response.json())
-			.then(users => this.setState({ robots: users}));
-		
+      //   for(var i = 0; i < data.length; i++ )
+      //   {
+      //     var obj = data[i];
+      //     console.log("Name: " + obj.first_name + ", " + obj.gender);
+      //   }
+      // }
+  // componentDidMount() {
+  //   fetch('https://api.myjson.com/bins/zvaar')
+  //     .then(users => this.setState({ robots: users}));
 
-	}
+  // }
 
-	onSearchChange = (event) => {
-		this.setState({ searchfield: event.target.value })
-		
-	}
-
-	render() {
-		const filteredRobots = this.state.robots.filter(robots =>{
-			return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
-		})
-	if (this.state.robots.length === 0) {
-		return <h1>Loading</h1>
-	} else {
-		return (	
-			<div className='tc'>
-				<h1 className='f1'>RoboFriends</h1>
-				<SearchBox searchChange={this.onSearchChange}/>
-				<Scroll>
-					<CardList robots={filteredRobots} />
-				</Scroll>
-			</div>
-		);
-
-	}
-	}
-
+render() {
+    const { robots, searchfield } = this.state;
+    const filteredRobots = () => { robots.map() };
+    //(robot =>{return robot.id.toLowerCase().includes(searchfield.toLowerCase());
+    
+    // const filteredRobots = robots.map();
+    //const filteredRobots = ( {robots} ) => JSON.parse(JSON.stringify(test));
+    // const filteredRobots = robots.filter(robot =>{
+    //   return robot.name;
+    // })
+    return ( 
+        <div className='tc'>
+          <h1 className='f1'>StarWars Explorer</h1>
+            <Characters robots={filteredRobots} />
+        </div>
+      );
+  }
 }
 
 export default App;
+
+//   render() {
+//     const { robots } = this.state;
+//     // const testName = ({ robots }) => { return (robots.map());}
+//     const filteredRobots = robots.filter(robot =>{
+//       return (robot.name)
+//     })
+//   return (
+//     <div>
+//       <h1>StarWars Explorer</h1>
+//       <Characters robots={filteredRobots} />
+//       </div>
+//   );
+// }
+// }
+// export default App;
