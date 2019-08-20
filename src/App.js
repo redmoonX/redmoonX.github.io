@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import Characters from './Characters.js';
-// import test from './test.json'
+import DeetsJSON from './test.json'
 import './App.css';
-  
+//this works!
 class App extends Component {
   constructor() {
     super()
-      this.state = { robots: [], searchfield: ''}
-  
+      this.state = { 
+        robots: []
+      }
+
+
   }
 
-      componentDidMount() {
-        fetch('./test.json').then(users => this.setState({ robots: users }))
-        }
+      // componentDidMount() {
+        // fetch('./test.json').then(users => this.setState({ robots: users }))
+        // }
         // .then(resp => resp.json())
 
       //   var data = require('./test.json');
@@ -28,10 +31,21 @@ class App extends Component {
   //     .then(users => this.setState({ robots: users}));
 
   // }
+  componentDidMount() {
+
+}
 
 render() {
-    const { robots, searchfield } = this.state;
-    const filteredRobots = () => { robots.map() };
+// var gimmeDATA = () => jsonDATA.map(function() {return()});
+  var giveitDATA = DeetsJSON;
+
+  
+    // const grabbIT = () => {fetch('./test.json').then(users => this.setState({ robots: users }))
+    //     };
+    //     grabbIT();
+    // var dataDAMN = () => jsonDATA.map(users => this.setState({robots: users }));
+    // const { robots, searchfield } = this.state;
+    // const filteredRobots = () => { robots.map() };
     //(robot =>{return robot.id.toLowerCase().includes(searchfield.toLowerCase());
     
     // const filteredRobots = robots.map();
@@ -42,7 +56,7 @@ render() {
     return ( 
         <div className='tc'>
           <h1 className='f1'>StarWars Explorer</h1>
-            <Characters robots={filteredRobots} />
+            <Characters robots={giveitDATA} />
         </div>
       );
   }
