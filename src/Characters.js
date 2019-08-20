@@ -2,27 +2,38 @@ import React from 'react';
 import CharTemplate from './CharTemplate';
 
 
-const Characters = ({ people }) => {
-	
-	return (
-		<div>
-			    
-					{people.map((user, i) => {
-						return (<CharTemplate 
-							// key={i} 
-							// id={robots[i].id} 
-							name={people[i].name} 
-							// height={robots[i].height}
-							/>
-					);
-				})
+const Characters = ({charName}) => {
+return (
+	<div>
+{ 
 
-			}
-		</div>
-	);
+	(<CharTemplate name={charName} />)
+
+
+
+// people.map((user, i) => {
+// 	return( <CharTemplate
+// 		name={people.name} />);
+
+
+
 }
 
+
+	
+
+</div>
+)	
+} 
+
+
 export default Characters;
+
+
+// return(<div name={robots.map()}></div>);
+
+
+
 
 // import React from 'react';
 // import CharTemplate from './CharTemplate';

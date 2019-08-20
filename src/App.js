@@ -32,15 +32,16 @@ class App extends Component {
 
   // }
   componentDidMount() {
-    fetch('https://swapi.co/api/people/')
+    fetch('https://swapi.co/api/people/1/')
     .then(response => response.json())
     .then(users => this.setState( { robots: users }));
     }
 
 render() {
   const giveitDATA = this.state;
-  const digestOR = giveitDATA.robots.results;
-  console.log(this.state, { digestOR });
+  const digestOR = giveitDATA.robots.name;
+  // const dataBreach = digestOR;
+  console.log(this.state, { digestOR }, giveitDATA);
   
     // const grabbIT = () => {fetch('./test.json').then(users => this.setState({ robots: users }))
     //     };
@@ -58,7 +59,7 @@ render() {
     return ( 
         <div className='tc'>
           <h1 className='f1'>StarWars Explorer</h1>
-            <Characters people={digestOR} />
+            <Characters charName={digestOR} />
         </div>
       );
   }
