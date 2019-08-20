@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Characters from './Characters.js';
-import DeetsJSON from './test.json'
 import './App.css';
+// import DeetsJSON from './test.json'
 //this works!
 class App extends Component {
   constructor() {
@@ -32,13 +32,15 @@ class App extends Component {
 
   // }
   componentDidMount() {
-
-}
+    fetch('https://swapi.co/api/people/')
+    .then(response => response.json())
+    .then(users => this.setState( { robots: users }));
+    }
 
 render() {
-// var gimmeDATA = () => jsonDATA.map(function() {return()});
-  var giveitDATA = DeetsJSON;
-
+  const giveitDATA = this.state;
+  const digestOR = giveitDATA.robots.results;
+  console.log(this.state, { digestOR });
   
     // const grabbIT = () => {fetch('./test.json').then(users => this.setState({ robots: users }))
     //     };
@@ -56,7 +58,7 @@ render() {
     return ( 
         <div className='tc'>
           <h1 className='f1'>StarWars Explorer</h1>
-            <Characters robots={giveitDATA} />
+            <Characters people={digestOR} />
         </div>
       );
   }
