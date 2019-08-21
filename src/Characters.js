@@ -2,26 +2,25 @@ import React from 'react';
 import CharTemplate from './CharTemplate';
 
 
-const Characters = ({charName}) => {
+const Characters = ({ charName, charHeight, charMass, charHome, charGender }) => {
 return (
 	<div>
-{ 
-
-	(<CharTemplate name={charName} />)
 
 
+	(<CharTemplate 
+		name={charName}
+		gender={charGender}
+		height={charHeight}
+		mass={charMass}
+		homeworld={charHome}
+		 />
+		
+		
 
-// people.map((user, i) => {
-// 	return( <CharTemplate
-// 		name={people.name} />);
 
-
-
-}
 
 
 	
-
 </div>
 )	
 } 

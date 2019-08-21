@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super()
       this.state = { 
-        robots: []
+        robots: [],
+        worlds: []
       }
 
 
@@ -32,16 +33,31 @@ class App extends Component {
 
   // }
   componentDidMount() {
-    fetch('https://swapi.co/api/people/1/')
+    fetch('https://swapi.co/api/people/5/')
     .then(response => response.json())
     .then(users => this.setState( { robots: users }));
     }
 
 render() {
   const giveitDATA = this.state;
-  const digestOR = giveitDATA.robots.name;
-  // const dataBreach = digestOR;
-  console.log(this.state, { digestOR }, giveitDATA);
+  const nameJob = giveitDATA.robots.name;
+  const genderJob = giveitDATA.robots.gender;
+  const heightJob = giveitDATA.robots.height;
+  const massJob = giveitDATA.robots.mass;
+  const homewJob = giveitDATA.robots.homeworld;
+  const homewFetchJob = () => {
+    fetch(homewJob)
+    .then(response => response.json())
+    .then(world => this.setState({ worlds: world }));
+    // .then(function(data) { let please = data.name; please.map()});
+    // world => this.setState({ worlds: world }));
+  };
+  homewFetchJob();
+  const homewValueJob = this.state.worlds.name;
+  // console.log(homewFetchJob);
+  // console.log(this.state.worlds.name);
+    // const dataBreach = digestOR;
+  // console.log(this.state, { digestOR }, giveitDATA);
   
     // const grabbIT = () => {fetch('./test.json').then(users => this.setState({ robots: users }))
     //     };
@@ -59,7 +75,7 @@ render() {
     return ( 
         <div className='tc'>
           <h1 className='f1'>StarWars Explorer</h1>
-            <Characters charName={digestOR} />
+            <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewValueJob} charGender={genderJob} />
         </div>
       );
   }
