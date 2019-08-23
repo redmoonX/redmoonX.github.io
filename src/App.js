@@ -115,11 +115,11 @@ render() {
         <div className='tc'>
           <h1 className='f1'>StarWars Explorer</h1>
           <div className='f1'>
-              <button className='f1' onClick={ () => this.setState({ cview: 'Visible'})}>Characters</button>
-              <button className='f1' onClick={ () => this.setState({ wview: 'Visible'})}>Homeworlds</button>
-              <button className='f1' onClick={ () => this.setState({ sview: 'Visible'})}>Starships</button>
-              <button className='f1' onClick={ () => this.setState({ vview: 'Visible'})}>Vehicles</button>
-              <button className='f1' onClick={ () => this.setState({ fview: 'Visible'})}>Films</button>
+              <button className='f1' onClick={ () => this.setState({ cview: 'Visible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Characters</button>
+              <button className='f1' onClick={ () => this.setState({ wview: 'Visible', cview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Homeworlds</button>
+              <button className='f1' onClick={ () => this.setState({ sview: 'Visible', wview: 'Invisible', cview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Starships</button>
+              <button className='f1' onClick={ () => this.setState({ vview: 'Visible', wview: 'Invisible', sview: 'Invisible', cview: 'Invisible', fview: 'Invisible'})}>Vehicles</button>
+              <button className='f1' onClick={ () => this.setState({ fview: 'Visible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', cview: 'Invisible'})}>Films</button>
           </div>
             <div className={viewToggle}>
               <h2>Characters</h2>

@@ -10,7 +10,7 @@ const CharTemplate = ({ name, gender, homeworld, height, mass }) => {
 				<p>Height: {height} cm</p>
 				<p>Mass: {mass} kg</p>
 				<p>Homeworld: {homeworld}</p>
-				
+				<button> Prev. </button><button> Next </button>
 			</div>
 		</div>
 
