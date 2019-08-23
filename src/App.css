@@ -23,6 +23,19 @@
   color: #61dafb;
 }
 
+.false {
+background: black;
+}
+
+.Invisible {
+  overflow: hidden;
+position: absolute;
+left: -10000px;
+}
+/*.Characters {
+
+
+}*/
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

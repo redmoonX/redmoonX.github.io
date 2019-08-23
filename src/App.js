@@ -16,7 +16,12 @@ class App extends Component {
         ships: [],
         vehix: [],
         films: [],
-        residents: []
+        residents: [],
+        cview: 'Invisible',
+        wview: 'Invisible',
+        sview: 'Invisible',
+        vview: 'Invisible',
+        fview: 'Invisible'
       }
   }
 
@@ -40,7 +45,6 @@ class App extends Component {
 
 render() {
   // Characters
-  console.log(this.state);
   const giveitDATA = this.state;
   const nameJob = giveitDATA.robots.name;
   const genderJob = giveitDATA.robots.gender;
@@ -94,43 +98,52 @@ render() {
   const massJob4 = giveitDATA4.films.opening_crawl;
   const homewJob4 = giveitDATA4.films.characters;
 
+  // View
+  const viewToggleCalc = this.state;
+  const viewToggle = viewToggleCalc.cview;
+  const viewToggleCalc1 = this.state;
+  const viewToggle1 = viewToggleCalc1.wview;
+    const viewToggleCalc2 = this.state;
+  const viewToggle2 = viewToggleCalc2.sview;
+    const viewToggleCalc3 = this.state;
+  const viewToggle3 = viewToggleCalc3.vview;
+    const viewToggleCalc4 = this.state;
+  const viewToggle4 = viewToggleCalc4.fview;
+    
+
     return ( 
         <div className='tc'>
           <h1 className='f1'>StarWars Explorer</h1>
           <div className='f1'>
-              <button className='f1'>Characters</button>
-          
-              <button className='f1'>Homeworlds</button>
-            
-              <button className='f1'>Starships</button>
-            
-              <button className='f1'>Vehicles</button>
-           
-              <button className='f1'>Films</button>
-            
+              <button className='f1' onClick={ () => this.setState({ cview: 'Visible'})}>Characters</button>
+              <button className='f1' onClick={ () => this.setState({ wview: 'Visible'})}>Homeworlds</button>
+              <button className='f1' onClick={ () => this.setState({ sview: 'Visible'})}>Starships</button>
+              <button className='f1' onClick={ () => this.setState({ vview: 'Visible'})}>Vehicles</button>
+              <button className='f1' onClick={ () => this.setState({ fview: 'Visible'})}>Films</button>
           </div>
-            <div className='Characters'>
+            <div className={viewToggle}>
               <h2>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewValueJob} charGender={genderJob}>Characters</Characters>
             </div>
-            <div className='Homeworlds'>
+            <div className={viewToggle1}>
               <h2>Homeworlds</h2>
                 <Homeworlds charName={nameJob1} charHeight={heightJob1} charMass={massJob1} charHome={homewValueJob} charGender={genderJob1}>Characters</Homeworlds>
             </div>
-            <div className='Starships'>
+            <div className={viewToggle2}>
               <h2>Starships</h2>
                 <Starships charName={nameJob2} charHeight={heightJob2} charMass={massJob2} charHome={homewValueJob} charGender={genderJob2}>Characters</Starships>
             </div>
-            <div className='Vehicles'>
+            <div className={viewToggle3}>
               <h2>Vehicles</h2>
                 <Vehicles charName={nameJob3} charHeight={heightJob3} charMass={massJob3} charHome={homewValueJob} charGender={genderJob3}>Characters</Vehicles>
             </div>
-            <div className='Films'>
+            <div className={viewToggle4}>
               <h2>Films</h2>
                 <Films charName={nameJob4} charHeight={heightJob4} charMass={massJob4} charHome={homewValueJob} charGender={genderJob4}>Characters</Films>
             </div>
         </div>
             );
+  
   }
 }
 
