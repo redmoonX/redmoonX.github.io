@@ -7,10 +7,12 @@ import Vehicles from './Vehicles.js';
 import Films from './Films.js';
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
       this.state = { 
         robots: [],
+        allchars: [],
+        charindex: 1,
         worlds: [],
         cworlds: [],
         ships: [],
@@ -45,12 +47,64 @@ class App extends Component {
 
 render() {
   // Characters
-  const giveitDATA = this.state;
-  const nameJob = giveitDATA.robots.name;
-  const genderJob = giveitDATA.robots.gender;
-  const heightJob = giveitDATA.robots.height;
-  const massJob = giveitDATA.robots.mass;
-  const homewJob = giveitDATA.robots.homeworld;
+
+  // console.log(this.state);
+  // console.log(this.state.allchards.results[0].name);
+  // const giveitDATA = this.state;
+  // const testy = JSON.stringify(giveitDATA);
+  // const test1 = 
+  // var test2 =  
+  //   fetch('https://swapi.co/api/people/')
+  //   .then(response => console.log(response.json()))
+      // JSON.parse(response.json()))
+    // .then(console.log())
+    // .then(data => test2 = data)
+
+    
+    // .then(test1.results => 
+    const self = this;
+    async function apiGetAll () {
+      // var charindx = this.state.charindex
+      const resp = await fetch('https://swapi.co/api/people/')
+      const data = await resp.json()
+      const detail = await data.results[self.state.charindex]
+      const statehood = await self.setState( { allchars: detail } )
+      // console.log(data)
+      return detail }
+    // } catch (err) {
+    //   console.log(err)
+    // }
+
+    ;
+  apiGetAll();
+// apiGetAll();
+// console.log(this.state.allchars);
+    // console.log(this.state.charindex);
+  
+  // var test1 = test2;
+  // console.log(test2);
+    // .then(() => test2.results[this.state.charindex];
+    // .then(() => )
+    // .then(() => console.log(test2.results[this.state.charindex]));
+  // console.log(test2.results[this.state.charindex]);
+  // console.log(test2);
+  const giveitDATA = this.state.allchars;
+  // console.log(giveitDATA);
+  // console.log(giveitDATA);
+  // console.log(test1);
+    // .then(users => this.setState( { allchars: [users] }));
+  // console.log(testy);
+  // console.log(giveitDATA);
+  // const { prenameJob } = giveitDATA.allchars;
+  // const namejobtest = prenameJob;
+  // console.log(namejobtest);
+  const nameJob = giveitDATA.name;
+  // console.log(prenameJob);
+  // const nameJob = giveitDATA.robots.name;
+  const genderJob = giveitDATA.gender;
+  const heightJob = giveitDATA.height;
+  const massJob = giveitDATA.mass;
+  const homewJob = giveitDATA.homeworld;
   const homewFetchJob = () => {
     fetch(homewJob)
     .then(response => response.json())
@@ -125,6 +179,8 @@ render() {
               <h2>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewValueJob} charGender={genderJob}>Characters</Characters>
             </div>
+            <button onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>
+            <button onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>
             <div className={viewToggle1}>
               <h2>Homeworlds</h2>
                 <Homeworlds charName={nameJob1} charHeight={heightJob1} charMass={massJob1} charHome={homewValueJob} charGender={genderJob1}>Characters</Homeworlds>
