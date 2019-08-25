@@ -179,8 +179,8 @@ render() {
               <h2>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewValueJob} charGender={genderJob}>Characters</Characters>
             </div>
-            <button onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>
-            <button onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>
+            <button className={viewToggle} onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>
+            <button className={viewToggle} onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>
             <div className={viewToggle1}>
               <h2>Homeworlds</h2>
                 <Homeworlds charName={nameJob1} charHeight={heightJob1} charMass={massJob1} charHome={homewValueJob} charGender={genderJob1}>Characters</Homeworlds>
