@@ -173,65 +173,75 @@ render() {
               <div className='csstest tier1'>
               <h2>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewcValueJob} charGender={genderJob}>Characters</Characters>
-            { cbutton > 0 ? (<button className='{viewToggle} npbtn' onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>)
+            <div className='npbtn'>
+            { cbutton > 0 ? (<button onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>)
             : 
-            ( <button className='{viewToggle} npbtn'> Prev </button>)
+            ( <button> Prev </button>)
             }
-            { cbutton < 9 ? (<button className='{viewToggle} npbtn' onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>)
+            { cbutton < 9 ? (<button onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>)
             : 
-            ( <button className='{viewToggle} npbtn'> Next </button>)
+            ( <button> Next </button>)
             }
+            </div>
             </div>
             </div>
             <div className={viewToggle1}>
               <div className='csstest tier2'>
               <h2>Homeworlds</h2>
                 <Homeworlds charName={nameJob1} charHeight={heightJob1} charMass={massJob1} charHome={homewValueJob} charGender={genderJob1}>Characters</Homeworlds>
-            { wbutton > 0 ? (<button className={viewToggle1} onClick={() => this.setState({ worldindex: this.state.worldindex - 1 })}> Prev </button>)
+            <div className='npbtn'>
+            { wbutton > 0 ? (<button onClick={() => this.setState({ worldindex: this.state.worldindex - 1 })}> Prev </button>)
             : 
-            ( <button className={viewToggle1}> Prev </button>)
+            ( <button> Prev </button>)
             }  
-            { wbutton < 9 ? (<button className={viewToggle1} onClick={() => this.setState({ worldindex: this.state.worldindex + 1 })}> Next </button>)
+            { wbutton < 9 ? (<button onClick={() => this.setState({ worldindex: this.state.worldindex + 1 })}> Next </button>)
             : 
-            ( <button className={viewToggle1}> Next </button>)
+            ( <button> Next </button>)
             }
+            </div>
             </div>
             </div>
             <div className={viewToggle2}>
               <h2>Starships</h2>
                 <Starships charName={nameJob2} charHeight={heightJob2} charMass={massJob2} charHome={homewValueJob} charGender={genderJob2}>Characters</Starships>
-            { sbutton > 0 ? (<button className={viewToggle2} onClick={() => this.setState({ shipindex: this.state.shipindex - 1 })}> Prev </button>)
+            <div className='npbtn'>
+            { sbutton > 0 ? (<button onClick={() => this.setState({ shipindex: this.state.shipindex - 1 })}> Prev </button>)
             : 
-            ( <button className={viewToggle2}> Prev </button>)
+            ( <button> Prev </button>)
             }
-            { sbutton < 9 ? (<button className={viewToggle2} onClick={() => this.setState({ shipindex: this.state.shipindex + 1 })}> Next </button>)
+            { sbutton < 9 ? (<button onClick={() => this.setState({ shipindex: this.state.shipindex + 1 })}> Next </button>)
             : 
-            ( <button className={viewToggle2}> Next </button>)
+            ( <button> Next </button>)
             }
+            </div>
             </div>
             <div className={viewToggle3}>
               <h2>Vehicles</h2>
                 <Vehicles charName={nameJob3} charHeight={heightJob3} charMass={massJob3} charHome={homewValueJob} charGender={genderJob3}>Characters</Vehicles>
-            { vbutton > 0 ? (<button className={viewToggle3} onClick={() => this.setState({ vehicleindex: this.state.vehicleindex - 1 })}> Prev </button>)
+            <div className='npbtn'>
+            { vbutton > 0 ? (<button onClick={() => this.setState({ vehicleindex: this.state.vehicleindex - 1 })}> Prev </button>)
             : 
-            ( <button className={viewToggle3}> Prev </button>)
+            ( <button> Prev </button>)
             }         
-            { vbutton < 9 ? (<button className={viewToggle3} onClick={() => this.setState({ vehicleindex: this.state.vehicleindex + 1 })}> Next </button>)
+            { vbutton < 9 ? (<button onClick={() => this.setState({ vehicleindex: this.state.vehicleindex + 1 })}> Next </button>)
             : 
-            ( <button className={viewToggle3}> Next </button>)
+            ( <button> Next </button>)
             }
+            </div>
             </div>
             <div className={viewToggle4}>
               <h2>Films</h2>
                 <Films charName={nameJob4} charHeight={heightJob4} charMass={massJob4} charHome={homewValueJob} charGender={genderJob4}>Characters</Films>
-            { fbutton > 0 ? (<button className={viewToggle4} onClick={() => this.setState({ filmindex: this.state.filmindex - 1 })}> Prev </button>)
+            <div className='npbtn'>
+            { fbutton > 0 ? (<button onClick={() => this.setState({ filmindex: this.state.filmindex - 1 })}> Prev </button>)
             : 
-            ( <button className={viewToggle4}> Prev </button>)
+            ( <button> Prev </button>)
             }            
-            { fbutton < 6 ? (<button className={viewToggle4} onClick={() => this.setState({ filmindex: this.state.filmindex + 1 })}> Next </button>)
+            { fbutton < 6 ? (<button onClick={() => this.setState({ filmindex: this.state.filmindex + 1 })}> Next </button>)
             : 
-            ( <button className={viewToggle4}> Next </button>)
+            ( <button> Next </button>)
             }
+            </div>
             </div>
           </div>  
         </div>
