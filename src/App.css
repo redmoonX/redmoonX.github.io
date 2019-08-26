@@ -2,12 +2,84 @@
   text-align: center;
 }
 
+.apptest {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+
+}
+.Invisible {
+  padding-top: 100px;
+  position: fixed;
+  left: -10000px;
+}
+/*.Winvisible {
+  padding-top: 100px;
+  position: fixed;
+  left: -10000px;
+}
+.Winvisible {
+  padding-top: 100px;
+  position: fixed;
+  left: -10000px;
+}
+.Winvisible {
+  padding-top: 100px;
+  position: fixed;
+  left: -10000px;
+}
+.Winvisible {
+  padding-top: 100px;
+  position: fixed;
+  left: -10000px;
+}*/
+.npbtn {
+  display: flex;
+  flex-flow: row;
+}
+.Cvisible {
+  /*padding-top: 100px;*/
+  position: fixed;
+  left: 0%;
+  width: 20%;
+  display: flex;
+  /*justify-content: center;*/
+}
+.Wvisible {
+  padding-top: 40px;
+  position: fixed;
+  left: 20%;
+  width: 20%;
+}
+
+.Svisible {
+  padding-top: 80px;
+  position: fixed;
+  left: 40%;
+  width: 20%;
+}
+.Vvisible {
+  padding-top: 40px;
+  position: fixed;
+  left: 60%;
+  width: 20%;
+}
+.Fvisible {
+  /*padding-top: 100px;*/
+  position: fixed;
+  left: 80%;
+  width: 20%;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
 
+.csstest{
+  padding-right: 50px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

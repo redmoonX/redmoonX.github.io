@@ -23,11 +23,11 @@ class App extends Component {
         vehix: [],
         films: [],
         residents: [],
-        cview: 'Invisible',
-        wview: 'Invisible',
-        sview: 'Invisible',
-        vview: 'Invisible',
-        fview: 'Invisible'
+        cview: 'Cvisible',
+        wview: 'Wvisible',
+        sview: 'Svisible',
+        vview: 'Vvisible',
+        fview: 'Fvisible'
       }
   }
 
@@ -95,7 +95,6 @@ render() {
 
 // Characters
   const giveitDATA = this.state.allchars;
-
   const nameJob = giveitDATA.name;
   const genderJob = giveitDATA.gender;
   const heightJob = giveitDATA.height;
@@ -161,57 +160,50 @@ render() {
     
     return ( 
         <div className='tc'>
-          <h1 className='f1'>StarWars Explorer</h1>
+          <h1 className='f1'>Starwars Explorer</h1>
           <div className='f1'>
-              <button className='f1' onClick={ () => this.setState({ cview: 'Visible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Characters</button>
-              <button className='f1' onClick={ () => this.setState({ wview: 'Visible', cview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Homeworlds</button>
-              <button className='f1' onClick={ () => this.setState({ sview: 'Visible', wview: 'Invisible', cview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Starships</button>
-              <button className='f1' onClick={ () => this.setState({ vview: 'Visible', wview: 'Invisible', sview: 'Invisible', cview: 'Invisible', fview: 'Invisible'})}>Vehicles</button>
-              <button className='f1' onClick={ () => this.setState({ fview: 'Visible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', cview: 'Invisible'})}>Films</button>
+              <button className='f1' onClick={ () => this.setState({ cview: 'Cvisible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Characters</button>
+              <button className='f1' onClick={ () => this.setState({ wview: 'Wvisible', cview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Homeworlds</button>
+              <button className='f1' onClick={ () => this.setState({ sview: 'Svisible', wview: 'Invisible', cview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Starships</button>
+              <button className='f1' onClick={ () => this.setState({ vview: 'Vvisible', wview: 'Invisible', sview: 'Invisible', cview: 'Invisible', fview: 'Invisible'})}>Vehicles</button>
+              <button className='f1' onClick={ () => this.setState({ fview: 'Fvisible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', cview: 'Invisible'})}>Films</button>
           </div>
+          <div className='apptest'>
             <div className={viewToggle}>
+              <div className='csstest tier1'>
               <h2>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewcValueJob} charGender={genderJob}>Characters</Characters>
+            { cbutton > 0 ? (<button className='{viewToggle} npbtn' onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>)
+            : 
+            ( <button className='{viewToggle} npbtn'> Prev </button>)
+            }
+            { cbutton < 9 ? (<button className='{viewToggle} npbtn' onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>)
+            : 
+            ( <button className='{viewToggle} npbtn'> Next </button>)
+            }
             </div>
-            <div className="CharCounter">
-            { cbutton > 0 ? (<button className={viewToggle} onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>)
-            : 
-            ( <button className={viewToggle}> Prev </button>)
-            }
-           
-             
-            { cbutton < 9 ? (<button className={viewToggle} onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>)
-            : 
-            ( <button className={viewToggle}> Next </button>)
-            }
             </div>
             <div className={viewToggle1}>
+              <div className='csstest tier2'>
               <h2>Homeworlds</h2>
                 <Homeworlds charName={nameJob1} charHeight={heightJob1} charMass={massJob1} charHome={homewValueJob} charGender={genderJob1}>Characters</Homeworlds>
-            </div>
-            <div className="HomeworldsCounter">
             { wbutton > 0 ? (<button className={viewToggle1} onClick={() => this.setState({ worldindex: this.state.worldindex - 1 })}> Prev </button>)
             : 
             ( <button className={viewToggle1}> Prev </button>)
-            }
-           
-             
+            }  
             { wbutton < 9 ? (<button className={viewToggle1} onClick={() => this.setState({ worldindex: this.state.worldindex + 1 })}> Next </button>)
             : 
             ( <button className={viewToggle1}> Next </button>)
             }
             </div>
+            </div>
             <div className={viewToggle2}>
               <h2>Starships</h2>
                 <Starships charName={nameJob2} charHeight={heightJob2} charMass={massJob2} charHome={homewValueJob} charGender={genderJob2}>Characters</Starships>
-            </div>
-            <div className="StarshipsCounter">
             { sbutton > 0 ? (<button className={viewToggle2} onClick={() => this.setState({ shipindex: this.state.shipindex - 1 })}> Prev </button>)
             : 
             ( <button className={viewToggle2}> Prev </button>)
             }
-           
-             
             { sbutton < 9 ? (<button className={viewToggle2} onClick={() => this.setState({ shipindex: this.state.shipindex + 1 })}> Next </button>)
             : 
             ( <button className={viewToggle2}> Next </button>)
@@ -220,14 +212,10 @@ render() {
             <div className={viewToggle3}>
               <h2>Vehicles</h2>
                 <Vehicles charName={nameJob3} charHeight={heightJob3} charMass={massJob3} charHome={homewValueJob} charGender={genderJob3}>Characters</Vehicles>
-            </div>
-            <div className="VehiclesCounter">
             { vbutton > 0 ? (<button className={viewToggle3} onClick={() => this.setState({ vehicleindex: this.state.vehicleindex - 1 })}> Prev </button>)
             : 
             ( <button className={viewToggle3}> Prev </button>)
-            }
-           
-             
+            }         
             { vbutton < 9 ? (<button className={viewToggle3} onClick={() => this.setState({ vehicleindex: this.state.vehicleindex + 1 })}> Next </button>)
             : 
             ( <button className={viewToggle3}> Next </button>)
@@ -236,23 +224,18 @@ render() {
             <div className={viewToggle4}>
               <h2>Films</h2>
                 <Films charName={nameJob4} charHeight={heightJob4} charMass={massJob4} charHome={homewValueJob} charGender={genderJob4}>Characters</Films>
-            </div>
-            <div className="FilmsCounter">
             { fbutton > 0 ? (<button className={viewToggle4} onClick={() => this.setState({ filmindex: this.state.filmindex - 1 })}> Prev </button>)
             : 
             ( <button className={viewToggle4}> Prev </button>)
-            }
-           
-             
+            }            
             { fbutton < 6 ? (<button className={viewToggle4} onClick={() => this.setState({ filmindex: this.state.filmindex + 1 })}> Next </button>)
             : 
             ( <button className={viewToggle4}> Next </button>)
             }
             </div>
+          </div>  
         </div>
             );
-  
   }
 }
-
 export default App;
