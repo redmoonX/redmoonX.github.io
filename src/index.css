@@ -5,9 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  /*background-image: url("https://i.imgur.com/pqdICWJ.mp4");*/
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#myVideo {
+	position: absolute;
+	/*right: 0;*/
+	/*bottom: 0;*/
+	min-width: 100%;
+	min-height: 70%;
+	/*left: 50px;
+/*	min-width: 190vh;
+	min-height: 100vh;*/
+	background-size: cover;
+		}

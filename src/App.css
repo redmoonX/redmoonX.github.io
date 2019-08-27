@@ -1,52 +1,46 @@
 .App {
   text-align: center;
+  color: #FFD900;
+  /*background-color: black;*/
 }
-
+/*.csstest {
+  background-color: black;
+}*/
+/*.tc {
+  background-color: black;
+}*/
 .apptest {
   display: flex;
   flex-direction: row;
+  /*background-color: black;*/
   /*justify-content: center;*/
 
+}
+.Headertop {
+  position: fixed;
+  left: 40%;
+/*  width: 20%;*/
 }
 .Invisible {
   padding-top: 100px;
   position: fixed;
   left: -10000px;
 }
-/*.Winvisible {
-  padding-top: 100px;
-  position: fixed;
-  left: -10000px;
-}
-.Winvisible {
-  padding-top: 100px;
-  position: fixed;
-  left: -10000px;
-}
-.Winvisible {
-  padding-top: 100px;
-  position: fixed;
-  left: -10000px;
-}
-.Winvisible {
-  padding-top: 100px;
-  position: fixed;
-  left: -10000px;
-}*/
 .npbtn {
   display: flex;
   flex-flow: row;
-  padding-left: 10px;
-  padding-right: 10px;
+  /*background-color: black;*/
+/*  padding-left: 10px;
+  padding-right: 10px;*/
   /*flex-grow: 1;*/
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .Cvisible {
   /*padding-top: 100px;*/
   position: fixed;
   left: 0%;
   width: 20%;
-  display: flex;
+  /*display: flex;*/
   /*justify-content: center;*/
 }
 .Wvisible {
@@ -81,9 +75,9 @@
   pointer-events: none;
 }
 
-.csstest{
-  padding-right: 50px;
-}
+/*.csstest{
+  padding-right: 50px;*/
+/*}*/
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -5,6 +5,7 @@ import Homeworlds from './Homeworlds.js';
 import Starships from './Starships.js';
 import Vehicles from './Vehicles.js';
 import Films from './Films.js';
+// import Background from './Background.js';
 
 class App extends Component {
   constructor(props) {
@@ -158,9 +159,11 @@ render() {
   const vbutton = this.state.vehicleindex;
   const fbutton = this.state.filmindex;
     
-    return ( 
-        <div className='tc'>
-          <h1 className='f1'>Starwars Explorer</h1>
+    return (
+        
+        <div className='tc App Headertop'>
+          <h1 className='f1'>Star Wars</h1>
+          <h1 className='f1'>Explorer</h1>
           <div className='f1'>
               <button className='f1' onClick={ () => this.setState({ cview: 'Cvisible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Characters</button>
               <button className='f1' onClick={ () => this.setState({ wview: 'Wvisible', cview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Homeworlds</button>
@@ -170,7 +173,7 @@ render() {
           </div>
           <div className='apptest'>
             <div className={viewToggle}>
-              <div className='csstest tier1'>
+              <div className='csstest'>
               <h2>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewcValueJob} charGender={genderJob}>Characters</Characters>
             <div className='npbtn'>
@@ -186,7 +189,7 @@ render() {
             </div>
             </div>
             <div className={viewToggle1}>
-              <div className='csstest tier2'>
+              <div className='csstest'>
               <h2>Homeworlds</h2>
                 <Homeworlds charName={nameJob1} charHeight={heightJob1} charMass={massJob1} charHome={homewValueJob} charGender={genderJob1}>Characters</Homeworlds>
             <div className='npbtn'>
@@ -245,6 +248,7 @@ render() {
             </div>
           </div>  
         </div>
+      
             );
   }
 }
