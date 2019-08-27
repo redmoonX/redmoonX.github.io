@@ -1,4 +1,5 @@
 import React from 'react';
+import Filmscroll from './Filmscroll.js';
 
 const SSTemplate = ({ name, gender, homeworld, height, mass }) => {
 	return (
@@ -8,9 +9,11 @@ const SSTemplate = ({ name, gender, homeworld, height, mass }) => {
 				<p>Title: {name}</p>
 				<p>Episode: {gender}</p>
 				<p>Release Date: {height}</p>
-				<p>Intro: {mass}</p>
+				<p>Intro: 
+				<Filmscroll>{mass}
+				</Filmscroll>
+				</p>
 				<p>Characters: {homeworld}</p>
-				
 			</div>
 		</div>
 

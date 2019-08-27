@@ -5,6 +5,8 @@ import Homeworlds from './Homeworlds.js';
 import Starships from './Starships.js';
 import Vehicles from './Vehicles.js';
 import Films from './Films.js';
+// import Filmscroll from './Filmscroll.js';
+
 // import Background from './Background.js';
 
 class App extends Component {
@@ -234,6 +236,7 @@ render() {
             </div>
             <div className={viewToggle4}>
               <h2>Films</h2>
+              
                 <Films charName={nameJob4} charHeight={heightJob4} charMass={massJob4} charHome={homewValueJob} charGender={genderJob4}>Characters</Films>
             <div className='npbtn'>
             { fbutton > 0 ? (<button onClick={() => this.setState({ filmindex: this.state.filmindex - 1 })}> Prev </button>)
@@ -245,6 +248,7 @@ render() {
             ( <button> Next </button>)
             }
             </div>
+          
             </div>
           </div>  
         </div>
