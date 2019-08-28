@@ -208,7 +208,7 @@ render() {
             </div>
             <div className={viewToggle2}>
               <h2>Starships</h2>
-                <Starships charName={nameJob2} charHeight={heightJob2} charMass={massJob2} charHome={homewValueJob} charGender={genderJob2}>Characters</Starships>
+                <Starships charName={nameJob2} charHeight={heightJob2} charMass={massJob2} charHome={homewJob2} charGender={genderJob2}>Characters</Starships>
             <div className='npbtn'>
             { sbutton > 0 ? (<button onClick={() => this.setState({ shipindex: this.state.shipindex - 1 })}> Prev </button>)
             : 
@@ -222,7 +222,7 @@ render() {
             </div>
             <div className={viewToggle3}>
               <h2>Vehicles</h2>
-                <Vehicles charName={nameJob3} charHeight={heightJob3} charMass={massJob3} charHome={homewValueJob} charGender={genderJob3}>Characters</Vehicles>
+                <Vehicles charName={nameJob3} charHeight={heightJob3} charMass={massJob3} charHome={homewJob3} charGender={genderJob3}>Characters</Vehicles>
             <div className='npbtn'>
             { vbutton > 0 ? (<button onClick={() => this.setState({ vehicleindex: this.state.vehicleindex - 1 })}> Prev </button>)
             : 
