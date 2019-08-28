@@ -157,11 +157,11 @@ render() {
   const viewToggle3 = viewToggleCalc3.vview;
   const viewToggleCalc4 = this.state;
   const viewToggle4 = viewToggleCalc4.fview;
-  const cbutton = this.state.charindex;
-  const wbutton = this.state.worldindex;
-  const sbutton = this.state.shipindex;
-  const vbutton = this.state.vehicleindex;
-  const fbutton = this.state.filmindex;
+  const cButton = this.state.charindex;
+  const wButton = this.state.worldindex;
+  const sButton = this.state.shipindex;
+  const vButton = this.state.vehicleindex;
+  const fButton = this.state.filmindex;
     
     return (
         
@@ -184,13 +184,13 @@ render() {
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewcValueJob} charGender={genderJob}>Characters</Characters>
             <div className='npbtn'>
             <ButtonToolbar className='npbtn'>
-            { cbutton > 0 ? (<Button variant='outline-danger' className='npbtn' onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </Button>)
+            { cButton > 0 ? (<Button variant='outline-danger' className='npbtn' onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </Button>)
             : 
             ( <Button variant='outline-danger' className='npbtn'> Prev </Button>)
             }
             <div className='btnspace'>
             </div>
-            { cbutton < 9 ? (<Button variant='outline-primary' className='npbtn' onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </Button>)
+            { cButton < 9 ? (<Button variant='outline-primary' className='npbtn' onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </Button>)
             : 
             ( <Button variant='outline-primary' className='npbtn'> Next </Button>)
             }
@@ -203,16 +203,18 @@ render() {
               <h2>Homeworlds</h2>
                 <Homeworlds charName={nameJob1} charHeight={heightJob1} charMass={massJob1} charHome={homewValueJob} charGender={genderJob1}>Characters</Homeworlds>
             <div className='npbtn'>
-            { wbutton > 0 ? (<button onClick={() => this.setState({ worldindex: this.state.worldindex - 1 })}> Prev </button>)
+            <ButtonToolbar className='npbtn'>
+            { wButton > 0 ? (<Button variant='outline-danger' onClick={() => this.setState({ worldindex: this.state.worldindex - 1 })}> Prev </Button>)
             : 
-            ( <button> Prev </button>)
+            ( <Button variant='outline-danger'> Prev </Button>)
             }
             <div className='btnspace'>
             </div>  
-            { wbutton < 9 ? (<button onClick={() => this.setState({ worldindex: this.state.worldindex + 1 })}> Next </button>)
+            { wButton < 9 ? (<Button variant='outline-primary' onClick={() => this.setState({ worldindex: this.state.worldindex + 1 })}> Next </Button>)
             : 
-            ( <button> Next </button>)
+            ( <Button variant='outline-primary'> Next </Button>)
             }
+            </ButtonToolbar>
             </div>
             </div>
             </div>
@@ -220,32 +222,36 @@ render() {
               <h2>Starships</h2>
                 <Starships charName={nameJob2} charHeight={heightJob2} charMass={massJob2} charHome={homewJob2} charGender={genderJob2}>Characters</Starships>
             <div className='npbtn'>
-            { sbutton > 0 ? (<button onClick={() => this.setState({ shipindex: this.state.shipindex - 1 })}> Prev </button>)
+            <ButtonToolbar className='npbtn'>
+            { sButton > 0 ? (<Button variant='outline-danger' onClick={() => this.setState({ shipindex: this.state.shipindex - 1 })}> Prev </Button>)
             : 
-            ( <button> Prev </button>)
+            ( <Button variant='outline-danger'> Prev </Button>)
             }
             <div className='btnspace'>
             </div> 
-            { sbutton < 9 ? (<button onClick={() => this.setState({ shipindex: this.state.shipindex + 1 })}> Next </button>)
+            { sButton < 9 ? (<Button variant='outline-primary' onClick={() => this.setState({ shipindex: this.state.shipindex + 1 })}> Next </Button>)
             : 
-            ( <button> Next </button>)
+            ( <Button variant='outline-primary'> Next </Button>)
             }
+            </ButtonToolbar>
             </div>
             </div>
             <div className={viewToggle3}>
               <h2>Vehicles</h2>
                 <Vehicles charName={nameJob3} charHeight={heightJob3} charMass={massJob3} charHome={homewJob3} charGender={genderJob3}>Characters</Vehicles>
             <div className='npbtn'>
-            { vbutton > 0 ? (<button onClick={() => this.setState({ vehicleindex: this.state.vehicleindex - 1 })}> Prev </button>)
+            <ButtonToolbar className='npbtn'>
+            { vButton > 0 ? (<Button variant='outline-danger' onClick={() => this.setState({ vehicleindex: this.state.vehicleindex - 1 })}> Prev </Button>)
             : 
-            ( <button> Prev </button>)
+            ( <Button variant='outline-danger'> Prev </Button>)
             }
             <div className='btnspace'>
             </div>          
-            { vbutton < 9 ? (<button onClick={() => this.setState({ vehicleindex: this.state.vehicleindex + 1 })}> Next </button>)
+            { vButton < 9 ? (<Button variant='outline-primary' onClick={() => this.setState({ vehicleindex: this.state.vehicleindex + 1 })}> Next </Button>)
             : 
-            ( <button> Next </button>)
+            ( <Button variant='outline-primary'> Next </Button>)
             }
+            </ButtonToolbar>
             </div>
             </div>
             <div className={viewToggle4}>
@@ -253,16 +259,18 @@ render() {
               
                 <Films charName={nameJob4} charHeight={heightJob4} charMass={massJob4} charHome={homewValueJob} charGender={genderJob4}>Characters</Films>
             <div className='npbtn'>
-            { fbutton > 0 ? (<button onClick={() => this.setState({ filmindex: this.state.filmindex - 1 })}> Prev </button>)
+            <ButtonToolbar className='npbtn'>
+            { fButton > 0 ? (<Button variant='outline-danger' onClick={() => this.setState({ filmindex: this.state.filmindex - 1 })}> Prev </Button>)
             : 
-            ( <button> Prev </button>)
+            ( <Button variant='outline-danger'> Prev </Button>)
             }
             <div className='btnspace'>
             </div>             
-            { fbutton < 6 ? (<button onClick={() => this.setState({ filmindex: this.state.filmindex + 1 })}> Next </button>)
+            { fButton < 6 ? (<Button variant='outline-primary' onClick={() => this.setState({ filmindex: this.state.filmindex + 1 })}> Next </Button>)
             : 
-            ( <button> Next </button>)
+            ( <Button variant='outline-primary'> Next </Button>)
             }
+            </ButtonToolbar>
             </div>
           
             </div>
