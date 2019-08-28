@@ -18,7 +18,10 @@
 }
 .Headertop {
   position: fixed;
-  left: 40%;
+/*  display: flex;
+  top: 0%;*/
+  left: 32%;
+/*  justify-content: center;*/
 /*  width: 20%;*/
 }
 .Invisible {
