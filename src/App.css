@@ -26,14 +26,18 @@
   position: fixed;
   left: -10000px;
 }
+.btnspace {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .npbtn {
-  display: flex !important;
+  display: flex;
   flex-flow: row;
   /*background-color: black;*/
 /*  padding-left: 10px;
   padding-right: 10px;*/
   /*flex-grow: 1;*/
-  justify-content: space-around !important;
+  justify-content: space-around;
 }
 .Cvisible {
   /*padding-top: 100px;*/

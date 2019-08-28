@@ -188,6 +188,8 @@ render() {
             : 
             ( <Button variant='outline-danger' className='npbtn'> Prev </Button>)
             }
+            <div className='btnspace'>
+            </div>
             { cbutton < 9 ? (<Button variant='outline-primary' className='npbtn' onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </Button>)
             : 
             ( <Button variant='outline-primary' className='npbtn'> Next </Button>)
@@ -204,7 +206,9 @@ render() {
             { wbutton > 0 ? (<button onClick={() => this.setState({ worldindex: this.state.worldindex - 1 })}> Prev </button>)
             : 
             ( <button> Prev </button>)
-            }  
+            }
+            <div className='btnspace'>
+            </div>  
             { wbutton < 9 ? (<button onClick={() => this.setState({ worldindex: this.state.worldindex + 1 })}> Next </button>)
             : 
             ( <button> Next </button>)
@@ -220,6 +224,8 @@ render() {
             : 
             ( <button> Prev </button>)
             }
+            <div className='btnspace'>
+            </div> 
             { sbutton < 9 ? (<button onClick={() => this.setState({ shipindex: this.state.shipindex + 1 })}> Next </button>)
             : 
             ( <button> Next </button>)
@@ -233,7 +239,9 @@ render() {
             { vbutton > 0 ? (<button onClick={() => this.setState({ vehicleindex: this.state.vehicleindex - 1 })}> Prev </button>)
             : 
             ( <button> Prev </button>)
-            }         
+            }
+            <div className='btnspace'>
+            </div>          
             { vbutton < 9 ? (<button onClick={() => this.setState({ vehicleindex: this.state.vehicleindex + 1 })}> Next </button>)
             : 
             ( <button> Next </button>)
@@ -248,7 +256,9 @@ render() {
             { fbutton > 0 ? (<button onClick={() => this.setState({ filmindex: this.state.filmindex - 1 })}> Prev </button>)
             : 
             ( <button> Prev </button>)
-            }            
+            }
+            <div className='btnspace'>
+            </div>             
             { fbutton < 6 ? (<button onClick={() => this.setState({ filmindex: this.state.filmindex + 1 })}> Next </button>)
             : 
             ( <button> Next </button>)

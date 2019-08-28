@@ -1,0 +1,9 @@
+.npbtn {
+  display: flex !important;
+  flex-flow: row !important;
+  /*background-color: black;*/
+/*  padding-left: 10px;
+  padding-right: 10px;*/
+  /*flex-grow: 1;*/
+  justify-content: space-around !important;
+}
