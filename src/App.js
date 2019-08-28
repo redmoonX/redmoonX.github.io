@@ -15,7 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props)
       this.state = { 
-        // robots: [],
+        robots: [],
         allchars: [],
         charindex: 0,
         worldindex: 0,
@@ -36,7 +36,37 @@ class App extends Component {
       }
   }
 
-  // componentDidMount() {
+// working
+  componentDidMount() {
+        const self = this;
+    async function apiGetAll () {
+      const urls = ['https://swapi.co/api/people/', 'https://swapi.co/api/planets/', 'https://swapi.co/api/starships/', 'https://swapi.co/api/vehicles/', 'https://swapi.co/api/films/']
+      const resp = await urls.map(url => fetch(url).then(response => response.json()))
+      // const data = resp[0].json()
+      const detail1 = await resp[0]
+      const detail = detail1.results
+      const statehood = await self.setState( { robots: detail } )
+      console.log(detail)
+      // console.log(this.state.robots)
+      return detail }
+      apiGetAll();
+    }
+
+// working
+//     const fetchMaster = () => {
+//       var data
+//       const urls = ['https://swapi.co/api/people/', 'https://swapi.co/api/planets/', 'https://swapi.co/api/starships/', 'https://swapi.co/api/vehicles/', 'https://swapi.co/api/films/']
+// var promises = urls.map(url => fetch(url).then(y => y.json()));
+// Promise.all(promises).then(results => this.setState({ robots: results }));
+
+//     }
+//     fetchMaster();
+
+
+    // fetch('https://swapi.co/api/people/', 'https://swapi.co/api/planets/')
+    // .then(response => response.json())
+    // .then(data => this.setState({ robots: data }));
+  // }
   //   // fetch('https://swapi.co/api/people/6/')
   //   // .then(response => response.json())
   //   // .then(users => this.setState( { robots: users }));
@@ -55,8 +85,10 @@ class App extends Component {
   //   }
 
 render() {
+// var dbtest = this.state.robots[0];
+// console.log(dbtest);
 
-
+// console.log(this.state.robots);
     const self = this;
     async function apiGetAll () {
       const resp = await fetch('https://swapi.co/api/people/')
@@ -99,6 +131,7 @@ render() {
   apiGetAll4();
 
   const giveitDATA = this.state;
+  console.log(giveitDATA);
 
   // Characters
   const nameJob = giveitDATA.allchars.name;
