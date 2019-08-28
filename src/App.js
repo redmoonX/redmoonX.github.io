@@ -5,6 +5,8 @@ import Homeworlds from './Homeworlds.js';
 import Starships from './Starships.js';
 import Vehicles from './Vehicles.js';
 import Films from './Films.js';
+import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 // import Filmscroll from './Filmscroll.js';
 
 // import Background from './Background.js';
@@ -118,7 +120,7 @@ render() {
   const genderJob1 = giveitDATA1.worlds.climate;
   const heightJob1 = giveitDATA1.worlds.terrain;
   const massJob1 = giveitDATA1.worlds.population;
-  const homewJob1 = giveitDATA1.worlds.residents;
+  // const homewJob1 = giveitDATA1.worlds.residents;
 
   // Starships
   const giveitDATA2 = this.state;
@@ -142,7 +144,7 @@ render() {
   const genderJob4 = giveitDATA4.films.episode_id;
   const heightJob4 = giveitDATA4.films.release_date;
   const massJob4 = giveitDATA4.films.opening_crawl;
-  const homewJob4 = giveitDATA4.films.characters;
+  // const homewJob4 = giveitDATA4.films.characters;
 
   // View
   const viewToggleCalc = this.state;
@@ -167,11 +169,13 @@ render() {
           <h1 className='f1'>Star Wars</h1>
           <h1 className='f1'>Explorer</h1>
           <div className='f1'>
-              <button className='f1' onClick={ () => this.setState({ cview: 'Cvisible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Characters</button>
-              <button className='f1' onClick={ () => this.setState({ wview: 'Wvisible', cview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Homeworlds</button>
-              <button className='f1' onClick={ () => this.setState({ sview: 'Svisible', wview: 'Invisible', cview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Starships</button>
-              <button className='f1' onClick={ () => this.setState({ vview: 'Vvisible', wview: 'Invisible', sview: 'Invisible', cview: 'Invisible', fview: 'Invisible'})}>Vehicles</button>
-              <button className='f1' onClick={ () => this.setState({ fview: 'Fvisible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', cview: 'Invisible'})}>Films</button>
+            <ButtonToolbar>
+              <Button variant="outline-secondary" className='f1' onClick={ () => this.setState({ cview: 'Cvisible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Characters</Button>
+              <Button variant="outline-secondary" className='f1' onClick={ () => this.setState({ wview: 'Wvisible', cview: 'Invisible', sview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Homeworlds</Button>
+              <Button variant="outline-secondary" className='f1' onClick={ () => this.setState({ sview: 'Svisible', wview: 'Invisible', cview: 'Invisible', vview: 'Invisible', fview: 'Invisible'})}>Starships</Button>
+              <Button variant="outline-secondary" className='f1' onClick={ () => this.setState({ vview: 'Vvisible', wview: 'Invisible', sview: 'Invisible', cview: 'Invisible', fview: 'Invisible'})}>Vehicles</Button>
+              <Button variant="outline-secondary" className='f1' onClick={ () => this.setState({ fview: 'Fvisible', wview: 'Invisible', sview: 'Invisible', vview: 'Invisible', cview: 'Invisible'})}>Films</Button>
+            </ButtonToolbar>
           </div>
           <div className='apptest'>
             <div className={viewToggle}>
@@ -179,14 +183,16 @@ render() {
               <h2>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewcValueJob} charGender={genderJob}>Characters</Characters>
             <div className='npbtn'>
-            { cbutton > 0 ? (<button onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </button>)
+            <ButtonToolbar className='npbtn'>
+            { cbutton > 0 ? (<Button variant='outline-danger' className='npbtn' onClick={() => this.setState({ charindex: this.state.charindex - 1 })}> Prev </Button>)
             : 
-            ( <button> Prev </button>)
+            ( <Button variant='outline-danger' className='npbtn'> Prev </Button>)
             }
-            { cbutton < 9 ? (<button onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </button>)
+            { cbutton < 9 ? (<Button variant='outline-primary' className='npbtn' onClick={() => this.setState({ charindex: this.state.charindex + 1 })}> Next </Button>)
             : 
-            ( <button> Next </button>)
+            ( <Button variant='outline-primary' className='npbtn'> Next </Button>)
             }
+            </ButtonToolbar>
             </div>
             </div>
             </div>

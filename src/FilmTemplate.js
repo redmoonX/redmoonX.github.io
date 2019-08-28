@@ -13,7 +13,6 @@ const SSTemplate = ({ name, gender, homeworld, height, mass }) => {
 				<Filmscroll>{mass}
 				</Filmscroll>
 				</p>
-				<p>Characters: {homeworld}</p>
 			</div>
 		</div>
 

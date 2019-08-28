@@ -8,9 +8,7 @@ const HWTemplate = ({ name, gender, homeworld, height, mass }) => {
 				<p>Name: {name}</p>
 				<p>Climate: {gender}</p>
 				<p>Terrain: {height}</p>
-				<p>Population: {mass}</p>
-				<p>Residents: TBA</p>
-				
+				<p>Population: {mass}</p>				
 			</div>
 		</div>
 

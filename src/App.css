@@ -27,13 +27,13 @@
   left: -10000px;
 }
 .npbtn {
-  display: flex;
+  display: flex !important;
   flex-flow: row;
   /*background-color: black;*/
 /*  padding-left: 10px;
   padding-right: 10px;*/
   /*flex-grow: 1;*/
-  justify-content: space-around;
+  justify-content: space-around !important;
 }
 .Cvisible {
   /*padding-top: 100px;*/
