@@ -15,7 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props)
       this.state = { 
-        robots: [],
+        // robots: [],
         allchars: [],
         charindex: 0,
         worldindex: 0,
@@ -27,7 +27,7 @@ class App extends Component {
         ships: [],
         vehix: [],
         films: [],
-        residents: [],
+        // residents: [],
         cview: 'Cvisible',
         wview: 'Wvisible',
         sview: 'Svisible',
@@ -98,13 +98,14 @@ render() {
       return detail };
   apiGetAll4();
 
-// Characters
-  const giveitDATA = this.state.allchars;
-  const nameJob = giveitDATA.name;
-  const genderJob = giveitDATA.gender;
-  const heightJob = giveitDATA.height;
-  const massJob = giveitDATA.mass;
-  const homewJob = giveitDATA.homeworld;
+  const giveitDATA = this.state;
+
+  // Characters
+  const nameJob = giveitDATA.allchars.name;
+  const genderJob = giveitDATA.allchars.gender;
+  const heightJob = giveitDATA.allchars.height;
+  const massJob = giveitDATA.allchars.mass;
+  const homewJob = giveitDATA.allchars.homeworld;
   const homewFetchJob = () => {
     fetch(homewJob)
     .then(response => response.json())
@@ -115,53 +116,53 @@ render() {
   const homewValueJob = this.state.worlds.name;
   
   // Homeworlds
-  const giveitDATA1 = this.state;
-  const nameJob1 = giveitDATA1.worlds.name;
-  const genderJob1 = giveitDATA1.worlds.climate;
-  const heightJob1 = giveitDATA1.worlds.terrain;
-  const massJob1 = giveitDATA1.worlds.population;
+  // const giveitDATA1 = this.state;
+  const nameJob1 = giveitDATA.worlds.name;
+  const genderJob1 = giveitDATA.worlds.climate;
+  const heightJob1 = giveitDATA.worlds.terrain;
+  const massJob1 = giveitDATA.worlds.population;
   // const homewJob1 = giveitDATA1.worlds.residents;
 
   // Starships
-  const giveitDATA2 = this.state;
-  const nameJob2 = giveitDATA2.ships.name;
-  const genderJob2 = giveitDATA2.ships.model;
-  const heightJob2 = giveitDATA2.ships.manufacturer;
-  const massJob2 = giveitDATA2.ships.crew;
-  const homewJob2 = giveitDATA2.ships.length;
+  // const giveitDATA2 = this.state;
+  const nameJob2 = giveitDATA.ships.name;
+  const genderJob2 = giveitDATA.ships.model;
+  const heightJob2 = giveitDATA.ships.manufacturer;
+  const massJob2 = giveitDATA.ships.crew;
+  const homewJob2 = giveitDATA.ships.length;
 
   // Vehicles
-  const giveitDATA3 = this.state;
-  const nameJob3 = giveitDATA3.vehix.name;
-  const genderJob3 = giveitDATA3.vehix.model;
-  const heightJob3 = giveitDATA3.vehix.manufacturer;
-  const massJob3 = giveitDATA3.vehix.crew;
-  const homewJob3 = giveitDATA3.vehix.length;
+  // const giveitDATA3 = this.state;
+  const nameJob3 = giveitDATA.vehix.name;
+  const genderJob3 = giveitDATA.vehix.model;
+  const heightJob3 = giveitDATA.vehix.manufacturer;
+  const massJob3 = giveitDATA.vehix.crew;
+  const homewJob3 = giveitDATA.vehix.length;
 
   // Films
-  const giveitDATA4 = this.state;
-  const nameJob4 = giveitDATA4.films.title;
-  const genderJob4 = giveitDATA4.films.episode_id;
-  const heightJob4 = giveitDATA4.films.release_date;
-  const massJob4 = giveitDATA4.films.opening_crawl;
+  // const giveitDATA4 = this.state;
+  const nameJob4 = giveitDATA.films.title;
+  const genderJob4 = giveitDATA.films.episode_id;
+  const heightJob4 = giveitDATA.films.release_date;
+  const massJob4 = giveitDATA.films.opening_crawl;
   // const homewJob4 = giveitDATA4.films.characters;
 
   // View
-  const viewToggleCalc = this.state;
-  const viewToggle = viewToggleCalc.cview;
-  const viewToggleCalc1 = this.state;
-  const viewToggle1 = viewToggleCalc1.wview;
-  const viewToggleCalc2 = this.state;
-  const viewToggle2 = viewToggleCalc2.sview;
-  const viewToggleCalc3 = this.state;
-  const viewToggle3 = viewToggleCalc3.vview;
-  const viewToggleCalc4 = this.state;
-  const viewToggle4 = viewToggleCalc4.fview;
-  const cButton = this.state.charindex;
-  const wButton = this.state.worldindex;
-  const sButton = this.state.shipindex;
-  const vButton = this.state.vehicleindex;
-  const fButton = this.state.filmindex;
+  // const viewToggleCalc = this.state;
+  const viewToggle = giveitDATA.cview;
+  // const viewToggleCalc1 = this.state;
+  const viewToggle1 = giveitDATA.wview;
+  // const viewToggleCalc2 = this.state;
+  const viewToggle2 = giveitDATA.sview;
+  // const viewToggleCalc3 = this.state;
+  const viewToggle3 = giveitDATA.vview;
+  // const viewToggleCalc4 = this.state;
+  const viewToggle4 = giveitDATA.fview;
+  const cButton = giveitDATA.charindex;
+  const wButton = giveitDATA.worldindex;
+  const sButton = giveitDATA.shipindex;
+  const vButton = giveitDATA.vehicleindex;
+  const fButton = giveitDATA.filmindex;
     
     return (
         
