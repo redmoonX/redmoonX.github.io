@@ -7,7 +7,6 @@ import Vehicles from './Vehicles.js';
 import Films from './Films.js';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-// import webfont from "webfont";
 // import Filmscroll from './Filmscroll.js';
 
 // import Background from './Background.js';
@@ -16,7 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props)
       this.state = { 
-        robots: [],
+        // robots: [],
         allchars: [],
         charindex: 0,
         worldindex: 0,
@@ -33,30 +32,14 @@ class App extends Component {
         wview: 'Wvisible',
         sview: 'Svisible',
         vview: 'Vvisible',
-        fview: 'Fvisible',
-        charsdb: [],
-        worldsdb: [],
-        shipsdb: [],
-        vehiclesdb: [],
-        filmsdb: []
+        fview: 'Fvisible'
       }
   }
 
 // working
-  // componentDidMount() {
-  //       const self = this;
-  //   async function apiGetAll () {
-  //     const urls = ['https://swapi.co/api/people/', 'https://swapi.co/api/planets/', 'https://swapi.co/api/starships/', 'https://swapi.co/api/vehicles/', 'https://swapi.co/api/films/']
-  //     const resp = await urls.map(url => fetch(url).then(response => response.json()))
-  //     // const data = resp[0].json()
-  //     const detail1 = await resp[0]
-  //     const detail = detail1.results
-  //     const statehood = await self.setState( { robots: detail } )
-  //     console.log(detail)
-  //     // console.log(this.state.robots)
-  //     return detail }
-  //     apiGetAll();
-  //   }
+  componentDidMount() {
+
+    }
 
 // working
 //     const fetchMaster = () => {
@@ -89,85 +72,104 @@ class App extends Component {
   //   .then(response => response.json())
   //   .then(users => this.setState( { films: users }));
   //   }
-// 
+
 render() {
-// webfont({
-//   files: "src/fonts/Starjedi-DGRW.ttf",
-//   fontName: "StarJedi-DGRW"
-// })
-//   .then(result => {
-//     console.log(result);
-    
-//     return result;
-//   })
-//   .catch(error => {
-//     throw error;
-//   });
+  const self = this;
+    function apiGetAll () {
+      const urls = ['https://swapi.co/api/people/', 'https://swapi.co/api/planets/', 'https://swapi.co/api/starships/', 'https://swapi.co/api/vehicles/', 'https://swapi.co/api/films/']
+      const resp = urls.map(url => fetch(url).then(response => response.json()))
+      const char1 = resp[0]
+      const char = char1.results
+      const statehood = self.setState( { allchars: char } )
+
+      const world1 = resp[1]
+      const world = world1.results
+      const statehood1 = self.setState( { worlds: world } )
+
+      const ships1 = resp[2]
+      const ships = ships1.results
+      const statehood2 = self.setState( { ships: ships } )
+
+      const vehicle1 = resp[3]
+      const vehicle = vehicle1.results
+      const statehood3 = self.setState( { vehix: vehicle } )
+
+      const films1 = resp[4]
+      const films = films1.results
+      const statehood4 = self.setState( { films: films } )
+      console.log(self.state, 'cDM')
+      // console.log(detail)
+      // console.log(this.state.robots)
+       }
+      apiGetAll();
+// const self = this;
+// async function contentLoader () {
+//   const start = 
 
 
+// }
+// }
 
-
-
-  // webfont.load({
-  //     custom: {
-  //       families: ['Starjedi-DGRW'],
-  //       urls: ['/fonts/Starjedi-DGRW.tff']
-  //     }
-  // });
 // var dbtest = this.state.robots[0];
 // console.log(dbtest);
 
 // console.log(this.state.robots);
-    const self = this;
-    async function apiGetAll () {
-      const resp = await fetch('https://swapi.co/api/people/')
-      const data = await resp.json()
-      const detail = await data.results[self.state.charindex]
-      const statehood = await self.setState( { allchars: detail } )
-      return detail };
-  apiGetAll();
+  //   const self = this;
+  //   async function apiGetAll () {
+  //     const resp = await fetch('https://swapi.co/api/people/')
+  //     const data = await resp.json()
+  //     const detail = await data.results[self.state.charindex]
+  //     const statehood = await self.setState( { allchars: detail } )
+  //     return detail };
+  // apiGetAll();
 
-    async function apiGetAll1 () {
-      const resp = await fetch('https://swapi.co/api/planets/')
-      const data = await resp.json()
-      const detail = await data.results[self.state.worldindex]
-      const statehood = await self.setState( { worlds: detail } )
-      return detail };
-  apiGetAll1();
+  //   async function apiGetAll1 () {
+  //     const resp = await fetch('https://swapi.co/api/planets/')
+  //     const data = await resp.json()
+  //     const detail = await data.results[self.state.worldindex]
+  //     const statehood = await self.setState( { worlds: detail } )
+  //     return detail };
+  // apiGetAll1();
 
-      async function apiGetAll2 () {
-      const resp = await fetch('https://swapi.co/api/starships/')
-      const data = await resp.json()
-      const detail = await data.results[self.state.shipindex]
-      const statehood = await self.setState( { ships: detail } )
-      return detail };
-  apiGetAll2();
+  //     async function apiGetAll2 () {
+  //     const resp = await fetch('https://swapi.co/api/starships/')
+  //     const data = await resp.json()
+  //     const detail = await data.results[self.state.shipindex]
+  //     const statehood = await self.setState( { ships: detail } )
+  //     return detail };
+  // apiGetAll2();
 
-      async function apiGetAll3 () {
-      const resp = await fetch('https://swapi.co/api/vehicles/')
-      const data = await resp.json()
-      const detail = await data.results[self.state.vehicleindex]
-      const statehood = await self.setState( { vehix: detail } )
-      return detail };
-  apiGetAll3();
+  //     async function apiGetAll3 () {
+  //     const resp = await fetch('https://swapi.co/api/vehicles/')
+  //     const data = await resp.json()
+  //     const detail = await data.results[self.state.vehicleindex]
+  //     const statehood = await self.setState( { vehix: detail } )
+  //     return detail };
+  // apiGetAll3();
 
-      async function apiGetAll4 () {
-      const resp = await fetch('https://swapi.co/api/films/')
-      const data = await resp.json()
-      const detail = await data.results[self.state.filmindex]
-      const statehood = await self.setState( { films: detail } )
-      return detail };
-  apiGetAll4();
-
-  const giveitDATA = this.state;
-  console.log(giveitDATA);
+  //     async function apiGetAll4 () {
+  //     const resp = await fetch('https://swapi.co/api/films/')
+  //     const data = await resp.json()
+  //     const detail = await data.results[self.state.filmindex]
+  //     const statehood = await self.setState( { films: detail } )
+  //     return detail };
+  // apiGetAll4();
+  console.log(this.state, 'state');
+  const statehood = this.state;
+  const charpull = statehood.allchars;
+  const charcount = statehood.charindex;
+  const giveitDATA = charpull;
+  console.log(charpull, 'charpull');
+  console.log(charcount, 'charcount');
+  console.log(giveitDATA, 'giveitDATA');
+  // console.log(giveitDATA);
 
   // Characters
-  const nameJob = giveitDATA.allchars.name;
-  const genderJob = giveitDATA.allchars.gender;
-  const heightJob = giveitDATA.allchars.height;
-  const massJob = giveitDATA.allchars.mass;
-  const homewJob = giveitDATA.allchars.homeworld;
+  const nameJob = giveitDATA.name;
+  const genderJob = giveitDATA.gender;
+  const heightJob = giveitDATA.height;
+  const massJob = giveitDATA.mass;
+  const homewJob = giveitDATA.homeworld;
   const homewFetchJob = () => {
     fetch(homewJob)
     .then(response => response.json())
@@ -229,7 +231,7 @@ render() {
     return (
         
         <div className='tc App Headertop'>
-          <h1 className='f1' style={{ fontFamily: "Starjedi-DGRW" }}>Star Wars</h1>
+          <h1 className='f1'>Star Wars</h1>
           <h1 className='f1'>Explorer</h1>
           <div className='f1'>
             <ButtonToolbar>
