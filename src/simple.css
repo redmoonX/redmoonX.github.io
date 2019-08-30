@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'StarJediRounded-jW3R';
+	font-style: normal;
+	font-size: 40px;
+	src: local('/public/fonts/simple.ttf'), local('/simple.ttf'), url('/fonts/StarJediRounded-jW3R.ttf') format('truetype')
+	
+};

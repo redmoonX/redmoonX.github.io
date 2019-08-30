@@ -1,15 +1,26 @@
-#root {
-  font-family: 'StarJedi-DGRW', sans-serif;
-
-}
-
 @font-face {
-  font-family: 'StarJedi-DGRW';
-  src: local('./StarJedi-DGRW'), url('https://redmoonX.github.io/src/StarJedi-DGRW.ttf') format('truetype');
+  font-family: 'simple';
+  src: url('simple.ttf')  format('truetype')
 }
+
+#root {
+  font-family: 'simple';
+  font-size: 50px;
+
+}
+/*.jesusplz {*/
+
+  /*font-family: 'simple';*/
+  /*font-size: 100px;*/
+/*}*/
+/*@font-face {
+  /*font-family: 'StarJediRounded-jW3R';
+  /*src: local('StarJediRounded-jW3R'), url('http://redmoonX.github.io/src/StarJediRounded-jW3R.ttf'), format('truetype')*/
+/*}*/
+
 body {
   margin: 0;
-  font-family: 'StarJedi-DGRW';
+  /*font-family: 'StarJediRounded-jW3R';*/
 /*  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;*/
