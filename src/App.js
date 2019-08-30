@@ -7,6 +7,9 @@ import Vehicles from './Vehicles.js';
 import Films from './Films.js';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import styled from 'styled-components';
+import './StarJediRounded-jW3R.ttf';
+import './fonts/font.css';
 // import webfont from "webfont";
 // import Filmscroll from './Filmscroll.js';
 
@@ -160,7 +163,7 @@ render() {
   apiGetAll4();
 
   const giveitDATA = this.state;
-  console.log(giveitDATA);
+  // console.log(giveitDATA);
 
   // Characters
   const nameJob = giveitDATA.allchars.name;
@@ -226,10 +229,12 @@ render() {
   const vButton = giveitDATA.vehicleindex;
   const fButton = giveitDATA.filmindex;
     
-    return (
-        
+    //font test
+  require('./fonts/font.css');
+  require('./fonts/StarJediRounded-jW3R.ttf');
+     return (
         <div className='tc App Headertop'>
-          <h1 className='f1' style={{ fontFamily: "Starjedi-DGRW" }}>Star Wars</h1>
+          <h1 className='f1' style={{ fontFamily: "StarJediRounded-jW3R" }}>Star Wars</h1>
           <h1 className='f1'>Explorer</h1>
           <div className='f1'>
             <ButtonToolbar>
@@ -243,7 +248,7 @@ render() {
           <div className='apptest'>
             <div className={viewToggle}>
               <div className='csstest'>
-              <h2>Characters</h2>
+              <h2 className='fontjedi'>Characters</h2>
                 <Characters charName={nameJob} charHeight={heightJob} charMass={massJob} charHome={homewcValueJob} charGender={genderJob}>Characters</Characters>
             <div className='npbtn'>
             <ButtonToolbar className='npbtn'>
@@ -339,6 +344,7 @@ render() {
             </div>
           </div>  
         </div>
+       
       
             );
   }

@@ -7,6 +7,7 @@ return (
 	<div>
 
 
+
 	<CharTemplate 
 		name={charName}
 		gender={charGender}
