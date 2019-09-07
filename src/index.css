@@ -1,50 +1,17 @@
-@font-face {
-  font-family: 'simple';
-  src: url('simple.ttf')  format('truetype')
-}
-
-#root {
-  font-family: 'simple';
-  font-size: 50px;
-
-}
-/*.jesusplz {*/
-
-  /*font-family: 'simple';*/
-  /*font-size: 100px;*/
-/*}*/
-/*@font-face {
-  /*font-family: 'StarJediRounded-jW3R';
-  /*src: local('StarJediRounded-jW3R'), url('http://redmoonX.github.io/src/StarJediRounded-jW3R.ttf'), format('truetype')*/
-/*}*/
-
 body {
   margin: 0;
-  /*font-family: 'StarJediRounded-jW3R';*/
-/*  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to left, rgba(7,27,82,1) 0%, rgba(0,128,128,1) 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;*/
-      /*font-family: StarJedi-DGRW;*/
-  /*src: local('Starjedi-DGRW'), url(./StarJedi-DGRW.ttf) format('truetype');*/
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  /*background-image: url("https://i.imgur.com/pqdICWJ.mp4");*/
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-#myVideo {
-	position: absolute;
-	/*right: 0;*/
-	/*bottom: 0;*/
-	min-width: 100%;
-	min-height: 70%;
-	/*left: 50px;
-/*	min-width: 190vh;
-	min-height: 100vh;*/
-	background-size: cover;
-		}
