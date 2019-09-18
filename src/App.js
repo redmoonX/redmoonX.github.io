@@ -1,28 +1,16 @@
-import React, { Component } from 'react';
-import './fonts/simple.ttf';
-import './fonts/simple.css';
+import React from 'react';
+import './App.css';
+import Navigation from './Components/Navigation/Navigation'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-      this.state = { 
-        robots: []
-      }
-  }
-
-
-render() {
-
-    
-  require('./fonts/simple.css');
-  require('./fonts/simple.ttf');
-     return (
-      <div>TESTFONT1
-      <p className="jesusplz">testfont2</p>
-
-      </div>
-      )
-        
-  }
+function App() {
+  return (
+    <div className="App">
+      <Navigation />
+      {/*<Logo />
+      <ImageLinkForm />
+      <FaceRecognition />*/}
+    </div>
+  );
 }
+
 export default App;

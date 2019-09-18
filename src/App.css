@@ -1,94 +1,5 @@
-.fontjedi {
-  /*font-family: 'StarJediRounded-jW3R';*/
-}
-
 .App {
   text-align: center;
-  color: #FFD900;
-  /*background-color: black;*/
-}
-/*.csstest {
-  background-color: black;
-}*/
-/*.tc {
-  background-color: black;
-}*/
-.apptest {
-  display: flex;
-  flex-direction: row;
-  /*background-color: black;*/
-  /*justify-content: center;*/
-
-}
-.Headertop {
-  position: fixed;
-/*  display: flex;
-  top: 0%;*/
-  left: 32%;
-/*  justify-content: center;*/
-/*  width: 20%;*/
-}
-.Invisible {
-  padding-top: 100px;
-  position: fixed;
-  left: -10000px;
-}
-.btnspace {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.npbtn {
-  display: flex;
-  flex-flow: row;
-  /*background-color: black;*/
-/*  padding-left: 10px;
-  padding-right: 10px;*/
-  /*flex-grow: 1;*/
-  justify-content: space-around;
-}
-.Cvisible {
-  /*padding-top: 100px;*/
-  position: fixed;
-  left: 0%;
-  width: 20%;
-/*  border: 1px ridge;
-  border-radius: 4px;*/
-  /*display: flex;*/
-  /*justify-content: center;*/
-}
-.Wvisible {
-  padding-top: 40px;
-  position: fixed;
-  left: 20%;
-  width: 20%;
-/*    outline: 4px solid red;
-  outline-offset: -15px;
-  outline-offset: 40px -15px 0px -15px;*/
-}
-
-.Svisible {
-  padding-top: 80px;
-  position: fixed;
-  left: 40%;
-  width: 20%;
-/*    border: 2px dotted black;
-  border-radius: 6px;*/
-}
-.Vvisible {
-  padding-top: 40px;
-  position: fixed;
-  left: 60%;
-  width: 20%;
-/*    border: 5px solid black;
-  border-radius: 8px;*/
-}
-.Fvisible {
-  /*padding-top: 100px;*/
-  position: fixed;
-  left: 80%;
-  width: 20%;
-/*    border: 5px solid black;
-  border-radius: 8px;*/
 }
 
 .App-logo {
@@ -97,9 +8,6 @@
   pointer-events: none;
 }
 
-/*.csstest{
-  padding-right: 50px;*/
-/*}*/
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -115,19 +23,6 @@
   color: #61dafb;
 }
 
-.false {
-background: black;
-}
-
-.Invisible {
-  overflow: hidden;
-position: absolute;
-left: -10000px;
-}
-/*.Characters {
-
-
-}*/
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -135,10 +30,4 @@ left: -10000px;
   to {
     transform: rotate(360deg);
   }
-}
-
-.f1 {
-  display: flex;
-  justify-content: center;
-  /*flex-direction: columns;*/
 }
